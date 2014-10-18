@@ -1,0 +1,33 @@
+<!doctype html>
+<!--Admin.php-->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="desktop.css"/>
+<title>CMS Admin Module</title>
+</head>
+<body>
+<h1>CMS administrative Module </h1>
+<h2>DATA Entry</h2>
+<form action="DataEntry.php" method="POST">
+<input type="text" name="dpHeader">
+&nbsp;Design pattern name<br/>
+Write up for design pattern:<br/>
+<textarea name="textBlock" cols="48" rows="16"></textarea>
+<p/>
+<input type="text" name="imageURL">
+&nbsp;Grapphic URL
+<p/>
+<input type="submit" name="entry" value="Enter Page Data">
+</form>
+<h2>DATE UPDATE</h2>
+<form action="DataUpdate.php" method="post">
+<input type="text" name="dpUpdate">
+&nbsp;Design pattern name to update<br/>
+New write-up for design pattern:<br/>
+<textArea name="newData" cols="48" rows="16"></textarea>
+<p/>
+<input type="submit" name="update" value="Update Page Data">
+</form>
+</body>
+</html>
