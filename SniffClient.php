@@ -23,14 +23,14 @@ class SniffClient{
 		if(isset($_POST['dp'])){
 			$this->dpNow = $_POST['dp'];
 		}
-		$this->sub = new ContreteSubject();
+		$this->sub = new ConcreteSubject();
 		$this->userAgent = $_SERVER['HTTP_USER_AGENT'];
 		if(stripos($this->userAgent, 'android')){
 			$this->mobile = true;
-			$this->deviceObserver = new ContreteObserverPhone();
+			$this->deviceObserver = new ConcreteObserverPhone();
 		}
 		if(!$this->mobile){
-			$this->deviceObserver = new ContreteObserverDT();
+			$this->deviceObserver = new ConcreteObserverDT();
 		}
 		$this->sub->attachObser($this->deviceObserver);
 		$this->sub->setState($this->dpNow);

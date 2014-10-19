@@ -9,13 +9,13 @@
 * 2014-10-18 - created
 * 
 */
-class ContreteObserverPhone implements Observer{
+class ConcreteObserverPhone implements Observer{
 	private $currentState = array();
 	private $dpHeader;
 	private $bodytext;
 	private $imageURL;
 
-	public function update($Subject $subject){
+	public function update(Subject $subject){
 		$this->currentState = $subject->getState();
 		$this->dpHeader = $this->currentState[0];
 		$this->bodytext = $this->currentState[1];

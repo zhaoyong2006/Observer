@@ -13,7 +13,7 @@ class ConcreteSubject extends Subject{
 	private $hookup;
 	private $tableMaster;
 	private $designPattern;
-	private $stateset = array();
+	private $stateSet = array();
 
 	public function setState($dpNow){
 		$this->designPattern = strtolower($dpNow);
@@ -26,7 +26,7 @@ class ConcreteSubject extends Subject{
 			while($row = $result->fetch_assoc()){
 				$this->stateSet[0] = $row['dpHeader'];
 				$this->stateSet[1] = $row['textBlock'];
-				$this->stateSet[2] = $rpw['imageURL'];
+				$this->stateSet[2] = $row['imageURL'];
 			}
 			$result->close();
 		}

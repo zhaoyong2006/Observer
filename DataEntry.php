@@ -28,7 +28,7 @@ class DataEntry{
 
 		if($_POST['imageURL'])
 			$imageURL = $this->hookup->real_escape_string($_POST['imageURL']);
-		
+
 		$this->sql = "INSERT INTO $this->tableMaster 
 				(dpHeader,textBlock,imageURL) VALUES
 				('$dpHeader','$textBlock','$imageURL')";
