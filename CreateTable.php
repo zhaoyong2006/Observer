@@ -26,9 +26,9 @@ class CreateTable{
 		}
 
 		$sql = "CREATE TABLE $this->tableMaster(
-				id			INT(8),
+				id			INT(8) UNSIGNED AUTO_INCREMENT,
 				dpHeader 	NVARCHAR(50),
-				testBlock   TEXT,
+				textBlock   TEXT,
 				imageURL    NVARCHAR(60),
 				PRIMARY KEY (id))";
 		if($this->hookup->query($sql) === true){

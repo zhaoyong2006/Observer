@@ -31,7 +31,7 @@ class ConcreteSubject extends Subject{
 			$result->close();
 		}
 		$this->hookup->close();
-		$this->nitify();
+		$this->notify();
 	}
 
 	public function getState(){
